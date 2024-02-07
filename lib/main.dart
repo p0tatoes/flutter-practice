@@ -326,12 +326,12 @@ class MyHomePage extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(15.0, 45.0, 15.0, 15.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
                               "Your Names",
                             ),
-                            Expanded(child: SizedBox()),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
