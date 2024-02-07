@@ -289,6 +289,72 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
             ),
+            //* Social Media Card (Rounded)
+            SizedBox(
+              width: 300,
+              height: 300,
+              child: Card(
+                child: Column(
+                  children: [
+                    Stack(
+                      alignment: Alignment.bottomCenter,
+                      children: [
+                        Container(
+                          height: 130,
+                          color: Colors.amber[700],
+                        ),
+                        Positioned(
+                            bottom: -40,
+                            child: Container(
+                                width: 80,
+                                height: 80,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        width: 10.0,
+                                        strokeAlign: 1.0,
+                                        color:
+                                            Color.fromARGB(255, 247, 242, 249)),
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: NetworkImage(
+                                            "https://i.kym-cdn.com/entries/icons/original/000/047/940/cat_eating_looking_up.jpg"))))),
+                      ],
+                      clipBehavior: Clip.none,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(15.0, 45.0, 15.0, 15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Your Names",
+                            ),
+                            Expanded(child: SizedBox()),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text(
+                                  "Posts\n99",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(fontSize: 17.0),
+                                ),
+                                Text(
+                                  "Followers\n8",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(fontSize: 17.0),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
