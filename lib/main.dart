@@ -217,7 +217,7 @@ class MyHomePage extends StatelessWidget {
                         Align(
                           alignment: Alignment.bottomRight,
                           child: Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
+                            padding: EdgeInsets.only(right: 10.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
@@ -230,6 +230,59 @@ class MyHomePage extends StatelessWidget {
                           ),
                         )
                       ]),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 400,
+              height: 200,
+              child: Card(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 200,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  "https://i.kym-cdn.com/entries/icons/original/000/047/940/cat_eating_looking_up.jpg"),
+                              fit: BoxFit.cover)),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.all(15.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Your Name",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              "Designation",
+                              style: TextStyle(fontSize: 12.0),
+                            ),
+                            Expanded(child: SizedBox()),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Posts\n99",
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  "Followers\n8",
+                                  textAlign: TextAlign.center,
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
