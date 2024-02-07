@@ -135,8 +135,8 @@ class MyHomePage extends StatelessWidget {
                           color: Colors.white),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 10.0, vertical: 10.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
