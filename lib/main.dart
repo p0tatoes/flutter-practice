@@ -114,6 +114,7 @@ class MyHomePage extends StatelessWidget {
         child: Wrap(
           spacing: 15.0,
           children: [
+            //* E-commerce card
             Card(
               clipBehavior: Clip.antiAlias,
               child: SizedBox(
@@ -197,6 +198,7 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
             ),
+            //* Message Notification Bubble
             SizedBox(
               width: 200,
               height: 100,
@@ -233,6 +235,7 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
             ),
+            //* Social Media Card
             SizedBox(
               width: 400,
               height: 200,
