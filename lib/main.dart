@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: ThemeData.light(),
       title: "Demo Flutter App",
       home: const MyHomePage(),
     );
@@ -101,13 +101,18 @@ class MyHomePage extends StatelessWidget {
       drawer: Drawer(),
       appBar: AppBar(
         title: Text("Eloja",
-            style: TextStyle(fontWeight: FontWeight.w900, fontSize: 30)),
+            style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 30,
+                color: Colors.white)),
         centerTitle: false,
         backgroundColor: Colors.purple[900],
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 25.0),
         child: Wrap(
+          spacing: 15.0,
           children: [
             Card(
               clipBehavior: Clip.antiAlias,
@@ -191,7 +196,43 @@ class MyHomePage extends StatelessWidget {
                   ],
                 ),
               ),
-            )
+            ),
+            SizedBox(
+              width: 200,
+              height: 100,
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10.0),
+                        topRight: Radius.circular(10.0),
+                        bottomRight: Radius.circular(10.0))),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10.0),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Center(
+                            child: Text("How are you",
+                                style: TextStyle(fontSize: 17.0))),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text("February 7, 2024",
+                                    style: TextStyle(fontSize: 10.0)),
+                                Text("7:40 AM",
+                                    style: TextStyle(fontSize: 10.0)),
+                              ],
+                            ),
+                          ),
+                        )
+                      ]),
+                ),
+              ),
+            ),
           ],
         ),
       ),
